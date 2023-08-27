@@ -20,10 +20,13 @@ import Loader from "@/components/loader";
 import { cn } from "@/lib/utils";
 import UserAvatar from "@/components/user-avatar";
 import BotAvatar from "@/components/bot-avatar";
+import { useAuth } from "@clerk/nextjs";
 
 const ConversationPage = () => {
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+
+  const { userId } = useAuth();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -59,13 +62,18 @@ const ConversationPage = () => {
     console.log(values);
   };
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    router.push("/sign-in");
+  };
+
   //   const {isLoading, error} = form;
 
   return (
     <div>
       <Heading
         title="Conversation"
-        description="desc"
+        description="OpenAi client. Uses Clerk to authenticate user"
         icon={MessageSquare}
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
@@ -93,12 +101,22 @@ const ConversationPage = () => {
                   </FormItem>
                 )}
               />
-              <Button
-                className="col-span-12 lg:col-span-2 w-full"
-                disabled={isSubmitting}
-              >
-                Generate
-              </Button>
+              {userId ? (
+                <Button
+                  className="col-span-12 lg:col-span-2 w-full"
+                  disabled={isSubmitting}
+                >
+                  Generate
+                </Button>
+              ) : (
+                <Button
+                  variant="destructive"
+                  className="col-span-12 lg:col-span-2 w-full"
+                  onClick={handleLogin}
+                >
+                  Login To Use
+                </Button>
+              )}
             </form>
           </Form>
         </div>

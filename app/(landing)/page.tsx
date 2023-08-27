@@ -5,7 +5,7 @@ import React from "react";
 const LandingPage = () => {
   return (
     <div>
-      Landing page (unprotected)
+      Landing page (unused)
       <div>
         <Link href="/sign-in">
           <Button>Login</Button>

@@ -10,7 +10,10 @@ function middleware(request: NextRequest) {
 }
 
 export default authMiddleware({
-  publicRoutes: ["/"],
+  beforeAuth: (req) => {
+    return middleware(req);
+  },
+  publicRoutes: ["/(.*)"],
 });
 // export default authMiddleware();
 

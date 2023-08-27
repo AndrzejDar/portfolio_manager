@@ -20,8 +20,10 @@ import Loader from "@/components/loader";
 import { cn } from "@/lib/utils";
 import UserAvatar from "@/components/user-avatar";
 import BotAvatar from "@/components/bot-avatar";
+import { useAuth } from "@clerk/nextjs";
 
 const ConversationPage = () => {
+  const { userId } = useAuth();
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -97,7 +99,7 @@ const ConversationPage = () => {
                 className="col-span-12 lg:col-span-2 w-full"
                 disabled={isSubmitting}
               >
-                Generate
+                Generate2
               </Button>
             </form>
           </Form>

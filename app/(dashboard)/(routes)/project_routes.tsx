@@ -16,27 +16,18 @@ export const projects_data = [
     bgColor: "bg-violet-500/10",
   },
   {
-    label: "test project",
-    icon: MessageSquare,
-    href: "test",
-    color: "text-sky-500",
-    bgColor: "bg-violet-500/10",
-    type: "project",
-    descryption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!",
-    disabled: "true",
-  },
-  {
     label: "Portfolio Site",
     icon: MessageSquare,
-    href: "/portfolio_site",
+    href: "portfolio_site",
+    url: "https://anddar00.com/",
+    gitUrl: "https://github.com/AndrzejDar/Portfolio",
     color: "text-sky-500",
     bgColor: "bg-violet-500/10",
     type: "project",
     project_presentation: "iframe",
     title: "Portfolio site",
     descryption:
-      "Personal site that uses Sanity CMS to poulate data. Created with pure React and Scss",
+      "My previous portfolio site that uses Sanity CMS to poulate data. Created with React using only Framer-Motion libraty and SCSS for styling",
   },
   {
     label: "Chat GPT client",
@@ -94,7 +85,7 @@ export const projects_data = [
     project_presentation: "iframe",
     title: "AKD Architekci - architecture firm bussines site",
     descryption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!",
+      "Page created with wordpress. Main goal was to create unique design and rank for few relewant keywords in google. As of 2022 page ranks as 3rd after 3 years without any updates.",
   },
   {
     label: "Crypto wallet scraper & visualizer",
@@ -107,14 +98,14 @@ export const projects_data = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!",
     disabled: "true",
   },
+  // {
+  //   label: "opt 2",
+  //   icon: MessageSquare,
+  //   href: "/code",
+  //   color: "text-pink-700",
+  // },
   {
-    label: "opt 2",
-    icon: MessageSquare,
-    href: "/code",
-    color: "text-pink-700",
-  },
-  {
-    label: "Settings",
+    label: "User Settings",
     icon: Settings,
     href: "/settings",
   },

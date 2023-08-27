@@ -13,7 +13,6 @@ const Navbar = () => {
   return (
     <div className="flex items-center p-4 max-h-[64px]">
       <MobileSidebar />
-      {console.log(user)}
       <div className="flex w-full justify-end gap-2">
         {user && <UserButton afterSignOutUrl="/" />}
         {!user && (
@@ -22,7 +21,7 @@ const Navbar = () => {
               <Button variant="accent">Login</Button>
             </Link>
             <Link href="/sign-up">
-              <Button variant="accent">Register</Button>
+              <Button variant="outline">Register</Button>
             </Link>
           </>
         )}
