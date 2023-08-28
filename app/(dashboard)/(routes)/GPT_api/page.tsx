@@ -62,7 +62,7 @@ const ConversationPage = () => {
     console.log(values);
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = (e: MouseEvent) => {
     e.preventDefault();
     router.push("/sign-in");
   };
