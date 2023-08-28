@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>Self driving car</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="buttons">
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <button onclick="reset()">RESET (uses in case of no progression)</button>
+    <button id="counter"></button>
+    <button id="genCounter"></button>
+  </div>
+  <canvas id="myCanvas"> </canvas>
+
+  <div id="visuals">
+    <canvas id="graph"> </canvas>
+    <canvas id="chart"> </canvas>
+  </div>
+  <script src="utils.js"></script>
+  <script src="traffic.js"></script>
+  <script src="deathLine.js"></script>
+  <script src="neuralNetwork.js"></script>
+  <script src="sensor.js"></script>
+  <script src="road.js"></script>
+  <script src="controls.js"></script>
+  <script src="car.js"></script>
+  <script src="graph.js"></script>
+  <script src="main.js"></script>
+</body>

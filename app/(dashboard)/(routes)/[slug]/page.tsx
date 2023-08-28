@@ -45,10 +45,12 @@ const Page = ({ params }: { params: { slug: string } }) => {
                 Project Description
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="md:max-w-[800px] sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>{data.title}</DialogTitle>
-                <DialogDescription>{data.descryption}</DialogDescription>
+                <DialogDescription
+                  dangerouslySetInnerHTML={{ __html: data.descryption }}
+                ></DialogDescription>
               </DialogHeader>
               {/* content goes here */}
               <DialogFooter>

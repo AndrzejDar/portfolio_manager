@@ -42,13 +42,15 @@ export const projects_data = [
   {
     label: "Neural Network race",
     icon: MessageSquare,
-    href: "/GPT_api2",
+    href: "nn_racer",
+    url: "./nn_racer_src/index.html",
     color: "text-sky-500",
     bgColor: "bg-violet-500/10",
     type: "project",
+    project_presentation: "iframe",
+    title: "Neural Network car simulation",
     descryption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!",
-    disabled: "true",
+      "Procject visualizes implementation of evolutionary Neural Network, depicted as 'race'. Implemented in pure JS <br/><br/> Firstly, 1000 random agents are spawn, simulated and rated by their performance. Agents are sorted by their results. First 1% is copied to the next generation without modyfication (marked as green), rest is composed from randomly (weighted by performace score) selected two parents. Half of genome comes from one partent, the other half from the other. Then some random mutation is applied. This next population restarts simulation, rating and propagation cycle indifinitley. <br/><br/>  Obstacles on the coures are generated randomly to avoid overfitting to one scenario. Course is getting progresively harder. <br/><br/>  Each agent has the ability to increase or decrease its speed, turn left or right (4 outputs on NN). It also has limited number of sensors which detects objects nerbay (inputs of NN)",
   },
   {
     label: "Sorting Algos visualizer",
