@@ -21,7 +21,7 @@ const Settings = () => {
         clearTimeout(timeout);
       }
     };
-  }, [userId]);
+  }, [userId, router]);
 
   if (!userId) {
     return (

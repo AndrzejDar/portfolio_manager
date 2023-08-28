@@ -57,14 +57,29 @@ export default function Home() {
           .map((project) => (
             <Card
               onClick={() => {
-                router.push(project.href);
+                !project.disabled && router.push(project.href);
               }}
               key={project.href}
-              className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
+              className={cn(
+                "p-4 border-black/5 flex items-center justify-between  transition cursor-pointer",
+                project.disabled
+                  ? "cursor-default text-gray-400"
+                  : "hover:shadow-md"
+              )}
             >
               <div className="flex items-center gap-x-4">
-                <div className={cn("p-2 w-fit rounded-md", project.bgColor)}>
-                  <project.icon className={cn("w-8 h-8", project.color)} />
+                <div
+                  className={cn(
+                    "p-2 w-fit rounded-md",
+                    project.disabled ? "bg-gray-200" : project.bgColor
+                  )}
+                >
+                  <project.icon
+                    className={cn(
+                      "w-8 h-8",
+                      project.disabled ? "gray-500" : project.color
+                    )}
+                  />
                 </div>
                 <div className="font-semibold">{project.label}</div>
               </div>
