@@ -11,6 +11,8 @@ import {
   Option,
   FileImage,
   LineChart,
+  Archive,
+  BoxIcon,
 } from "lucide-react";
 
 export const projects_data = [
@@ -20,6 +22,19 @@ export const projects_data = [
     href: "dashboard",
     color: "text-yellow-500",
     bgColor: "bg-violet-500/10",
+  },
+  {
+    label: "Virtual warehouse Manager",
+    icon: Archive,
+    href: "virtual_warehouse",
+    url: "Y_Bc0FgejFM",
+    color: "text-sky-500",
+    bgColor: "bg-yellow-500/40",
+    type: "project",
+    project_presentation: "youtube",
+    title: "Virtual warehouse Manager",
+    descryption:
+      "Web app for managing virtual store and handling deliveries of digital products. Created with React, Tailwind, EP(Redux), ReactQuery. Application allows creating customers entities, adding products to storage, manage orders and deliveries, handle invoices.",
   },
   {
     label: "Portfolio Site",
@@ -36,15 +51,19 @@ export const projects_data = [
       "My previous portfolio site that uses Sanity CMS to poulate data. Created with React, using only Framer-Motion library and SCSS for styling",
   },
   {
-    label: "Chat GPT client",
-    icon: MessageSquare,
-    href: "/GPT_api",
+    label: "Project Manager",
+    icon: BoxIcon,
+    href: "project_manger",
+    url: "l1GxAkwUEPM",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
     type: "project",
+    project_presentation: "youtube",
+    title: "Project Manager",
     descryption:
-      "Simple chatGpt client implementation. Due to Api limitation You need to bo logged in to use it!",
+      "Project management system designed for users to customize, tag and organize their projects created with external API. With full user account management. Created using Next, React Query, shadcn/ui",
   },
+
   {
     label: "Neural Network race",
     icon: RollerCoaster,
@@ -94,6 +113,16 @@ export const projects_data = [
     title: "AKD Architekci - architecture firm bussines site",
     descryption:
       "Page created with wordpress. Main goal was to create unique design and rank for few relewant keywords in google. As of 2022 page ranks as 3rd after 3 years without any updates.",
+  },
+  {
+    label: "Chat GPT client",
+    icon: MessageSquare,
+    href: "/GPT_api",
+    color: "text-sky-500",
+    bgColor: "bg-yellow-500/40",
+    type: "project",
+    descryption:
+      "Simple chatGpt client implementation. Due to Api limitation You need to bo logged in to use it!",
   },
   {
     label: "Crypto wallet scraper & visualizer",
