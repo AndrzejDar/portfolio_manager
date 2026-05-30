@@ -14,7 +14,7 @@ const LanguageToggle = () => {
   };
 
   const baseBtn =
-    "px-2 py-1 text-xs font-medium rounded transition-colors";
+    "h-full px-3 text-sm font-medium rounded transition-colors";
   const activeCls = "bg-black text-white";
   const inactiveCls = "text-gray-500 hover:text-black";
 
@@ -22,7 +22,7 @@ const LanguageToggle = () => {
     <div
       role="group"
       aria-label="Language switcher"
-      className="flex items-center gap-1 border rounded-md p-0.5"
+      className="flex items-center border rounded-md h-10 p-0.5"
     >
       <button
         type="button"
