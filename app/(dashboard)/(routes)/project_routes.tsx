@@ -19,14 +19,14 @@ export const projects_data = [
   {
     label: "Dashboard",
     icon: LayoutDashboard,
-    href: "dashboard",
+    href: "/dashboard",
     color: "text-yellow-500",
     bgColor: "bg-violet-500/10",
   },
   {
     label: "Virtual warehouse Manager",
     icon: Archive,
-    href: "virtual_warehouse",
+    href: "/virtual_warehouse",
     url: "Y_Bc0FgejFM",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
@@ -39,7 +39,7 @@ export const projects_data = [
   {
     label: "Portfolio Site",
     icon: Baby,
-    href: "portfolio_site",
+    href: "/portfolio_site",
     url: "https://anddar00.com/",
     gitUrl: "https://github.com/AndrzejDar/Portfolio",
     color: "text-sky-500",
@@ -53,7 +53,7 @@ export const projects_data = [
   {
     label: "Project Manager",
     icon: BoxIcon,
-    href: "project_manager",
+    href: "/project_manager",
     url: "l1GxAkwUEPM",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
@@ -67,7 +67,7 @@ export const projects_data = [
   {
     label: "Neural Network race",
     icon: RollerCoaster,
-    href: "nn_racer",
+    href: "/nn_racer",
     url: "./nn_racer_src/index.html",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
@@ -91,7 +91,7 @@ export const projects_data = [
   {
     label: "Pathfinding Game",
     icon: Option,
-    href: "pathfinding_game",
+    href: "/pathfinding_game",
     url: "OyBymuIpRDU",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
@@ -104,7 +104,7 @@ export const projects_data = [
   {
     label: "Architecture firm site",
     icon: FileImage,
-    href: "akd",
+    href: "/akd",
     url: "https://akdarchitekci.pl/",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
@@ -127,7 +127,7 @@ export const projects_data = [
   {
     label: "Crypto wallet scraper & visualizer",
     icon: LineChart,
-    href: "scraper",
+    href: "/scraper",
     url: "https://afternoon-fjord-11259.herokuapp.com/",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
