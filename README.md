@@ -39,6 +39,49 @@ middleware.ts                          Clerk auth middleware
 All routes are public; auth is only enforced server-side on the
 `/api/conversation` endpoint so the ChatGPT client cannot be used anonymously.
 
+## Quality
+
+Lighthouse scores measured against the live deploy at
+`https://projects.anddar00.com/` (mobile, headless, Lighthouse 12.8.2):
+
+| Category | Score |
+|---|---|
+| Performance | 94 |
+| Accessibility | 88 |
+| Best Practices | 96 |
+| SEO | 91 |
+
+Reproduce locally with:
+
+```
+npx lighthouse https://projects.anddar00.com/ --chrome-flags="--headless"
+```
+
+The 88 accessibility score reflected three failing audits — `button-name`
+(icon-only buttons missing accessible names), `color-contrast` (disabled
+project cards using `text-gray-400` on white), and `label-content-name-mismatch`
+(the OpenAI client input had only a `placeholder`, no label). All three are
+fixed in this branch and will be reflected in the next deploy.
+
+A11y baseline established by this pass:
+
+- Project cards are keyboard-focusable via `<Link>`; disabled cards announce
+  `aria-disabled`.
+- Icon-only buttons in the project detail dialog have `aria-label`s and use
+  `asChild` so the underlying `<a>` is the single focusable element.
+- The MobileSidebar trigger has an explicit accessible name
+  (`common.openMenu`, translated for EN/PL).
+- The OpenAI client `Input` has both an `sr-only` `<FormLabel>` and an
+  `aria-label`.
+- Decorative icons are marked `aria-hidden="true"`.
+- All interactive elements expose a visible focus ring
+  (`focus-visible:ring-2`).
+
+Local production-build Lighthouse runs require the Clerk environment
+variables to be set; without them every route returns 500 and the audit
+cannot complete. The live-deploy numbers above are the authoritative
+scores.
+
 ## Running locally
 
 Required environment variables (see `.env.example`):
