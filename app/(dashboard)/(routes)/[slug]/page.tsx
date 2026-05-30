@@ -49,7 +49,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
               <DialogHeader>
                 <DialogTitle>{data.title}</DialogTitle>
                 <DialogDescription
-                  dangerouslySetInnerHTML={{ __html: data.descryption }}
+                  dangerouslySetInnerHTML={{ __html: data.description }}
                 ></DialogDescription>
               </DialogHeader>
               {/* content goes here */}

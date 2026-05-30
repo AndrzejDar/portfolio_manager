@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     const { messages } = body;
 
     if (!userId) {
-      return new NextResponse("Unathorized", { status: 401 });
+      return new NextResponse("Unauthorized", { status: 401 });
     }
 
     if (!configuration.apiKey) {
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
     });
     return NextResponse.json(response.data.choices[0].message);
   } catch (error) {
-    console.log("CONSERVATION_ERROR", error);
+    console.log("CONVERSATION_ERROR", error);
     return new NextResponse("Internal error", { status: 500 });
   }
 }

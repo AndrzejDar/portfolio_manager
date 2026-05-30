@@ -33,7 +33,7 @@ export const projects_data = [
     type: "project",
     project_presentation: "youtube",
     title: "Virtual warehouse Manager",
-    descryption:
+    description:
       "Web app for managing virtual store and handling deliveries of digital products. Created with React, Tailwind, EP(Redux), ReactQuery. Application allows creating customers entities, adding products to storage, manage orders and deliveries, handle invoices.",
   },
   {
@@ -47,20 +47,20 @@ export const projects_data = [
     type: "project",
     project_presentation: "iframe",
     title: "Portfolio site",
-    descryption:
-      "My previous portfolio site that uses Sanity CMS to poulate data. Created with React, using only Framer-Motion library and SCSS for styling",
+    description:
+      "My previous portfolio site that uses Sanity CMS to populate data. Created with React, using only Framer-Motion library and SCSS for styling",
   },
   {
     label: "Project Manager",
     icon: BoxIcon,
-    href: "project_manger",
+    href: "project_manager",
     url: "l1GxAkwUEPM",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
     type: "project",
     project_presentation: "youtube",
     title: "Project Manager",
-    descryption:
+    description:
       "Project management system designed for users to customize, tag and organize their projects created with external API. With full user account management. Created using Next, React Query, shadcn/ui",
   },
 
@@ -74,8 +74,8 @@ export const projects_data = [
     type: "project",
     project_presentation: "iframe",
     title: "Neural Network car simulation",
-    descryption:
-      "Procject visualizes implementation of evolutionary Neural Network, depicted as 'race'. Implemented in pure JS <br/><br/> Firstly, 1000 random agents are spawn, simulated and rated by their performance. Agents are sorted by their results. First 1% is copied to the next generation without modyfication (marked as green), rest is composed from randomly (weighted by performace score) selected two parents. Half of genome comes from one partent, the other half from the other. Then some random mutation is applied. This next population restarts simulation, rating and propagation cycle indifinitley. <br/><br/>  Obstacles on the coures are generated randomly to avoid overfitting to one scenario. Course is getting progresively harder. <br/><br/>  Each agent has the ability to increase or decrease its speed, turn left or right (4 outputs on NN). It also has limited number of sensors which detects objects nerbay (inputs of NN)",
+    description:
+      "Project visualizes implementation of evolutionary Neural Network, depicted as 'race'. Implemented in pure JS <br/><br/> Firstly, 1000 random agents are spawn, simulated and rated by their performance. Agents are sorted by their results. First 1% is copied to the next generation without modification (marked as green), rest is composed from randomly (weighted by performance score) selected two parents. Half of genome comes from one parent, the other half from the other. Then some random mutation is applied. This next population restarts simulation, rating and propagation cycle indefinitely. <br/><br/>  Obstacles on the course are generated randomly to avoid overfitting to one scenario. Course is getting progresively harder. <br/><br/>  Each agent has the ability to increase or decrease its speed, turn left or right (4 outputs on NN). It also has limited number of sensors which detects objects nearby (inputs of NN)",
   },
   {
     label: "Sorting Algos visualizer",
@@ -84,7 +84,7 @@ export const projects_data = [
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
     type: "project",
-    descryption:
+    description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!",
     disabled: "true",
   },
@@ -97,9 +97,9 @@ export const projects_data = [
     bgColor: "bg-yellow-500/40",
     type: "project",
     project_presentation: "youtube",
-    title: "Prototypye of game in Unity (C#)",
-    descryption:
-      "Prototype af a game inspired by Rimworld. My primary objectives were to design and implement a robust building system and procedural behavior for pawns, creating a dynamic and 'lively' gameplay experience. The entire project was developed using Unity and programmed in C#. The main focus of the project became pathfinding A* algorithm able to handle up to 1000 characters.",
+    title: "Prototype of game in Unity (C#)",
+    description:
+      "Prototype of a game inspired by Rimworld. My primary objectives were to design and implement a robust building system and procedural behavior for pawns, creating a dynamic and 'lively' gameplay experience. The entire project was developed using Unity and programmed in C#. The main focus of the project became pathfinding A* algorithm able to handle up to 1000 characters.",
   },
   {
     label: "Architecture firm site",
@@ -110,8 +110,8 @@ export const projects_data = [
     bgColor: "bg-yellow-500/40",
     type: "project",
     project_presentation: "iframe",
-    title: "AKD Architekci - architecture firm bussines site",
-    descryption:
+    title: "AKD Architekci - architecture firm business site",
+    description:
       "Page created with wordpress. Main goal was to create unique design and rank for few relewant keywords in google. As of 2022 page ranks as 3rd after 3 years without any updates.",
   },
   {
@@ -121,21 +121,21 @@ export const projects_data = [
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
     type: "project",
-    descryption:
+    description:
       "Simple chatGpt client implementation. Due to Api limitation You need to bo logged in to use it!",
   },
   {
     label: "Crypto wallet scraper & visualizer",
     icon: LineChart,
-    href: "scrapper",
+    href: "scraper",
     url: "https://afternoon-fjord-11259.herokuapp.com/",
     color: "text-sky-500",
     bgColor: "bg-yellow-500/40",
     type: "project",
     project_presentation: "iframe",
     title: "BTC wallet transaction visualizer",
-    descryption:
-      "App that scrapes transaction data from porvided BTC wallet address. Data is presented on graph and some numerical parameters are provided. <br/><br/> App was build using MERN stack: MongoDB, Express, React and Node",
+    description:
+      "App that scrapes transaction data from provided BTC wallet address. Data is presented on graph and some numerical parameters are provided. <br/><br/> App was built using MERN stack: MongoDB, Express, React and Node",
     // disabled: "true",
   },
   // {
