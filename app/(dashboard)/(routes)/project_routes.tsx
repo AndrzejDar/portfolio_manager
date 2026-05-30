@@ -135,8 +135,8 @@ export const projects_data = [
     project_presentation: "iframe",
     title: "BTC wallet transaction visualizer",
     description:
-      "App that scrapes transaction data from provided BTC wallet address. Data is presented on graph and some numerical parameters are provided. <br/><br/> App was built using MERN stack: MongoDB, Express, React and Node",
-    // disabled: "true",
+      "App that scrapes transaction data from provided BTC wallet address. Data is presented on graph and some numerical parameters are provided. <br/><br/> App was built using MERN stack: MongoDB, Express, React and Node. <br/><br/> Live demo retired (Heroku free tier sunset, November 2022).",
+    disabled: "true",
   },
   // {
   //   label: "opt 2",
