@@ -14,8 +14,24 @@ import {
   Archive,
   BoxIcon,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-export const projects_data = [
+export interface Project {
+  label: string;
+  icon: LucideIcon;
+  href: string;
+  url?: string;
+  gitUrl?: string;
+  color?: string;
+  bgColor?: string;
+  type?: "project";
+  project_presentation?: "youtube" | "iframe";
+  title?: string;
+  description?: string;
+  disabled?: boolean;
+}
+
+export const projects_data: Project[] = [
   {
     label: "Dashboard",
     icon: LayoutDashboard,
@@ -86,7 +102,7 @@ export const projects_data = [
     type: "project",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!",
-    disabled: "true",
+    disabled: true,
   },
   {
     label: "Pathfinding Game",
@@ -136,7 +152,7 @@ export const projects_data = [
     title: "BTC wallet transaction visualizer",
     description:
       "App that scrapes transaction data from provided BTC wallet address. Data is presented on graph and some numerical parameters are provided. <br/><br/> App was built using MERN stack: MongoDB, Express, React and Node. <br/><br/> Live demo retired (Heroku free tier sunset, November 2022).",
-    disabled: "true",
+    disabled: true,
   },
   // {
   //   label: "opt 2",

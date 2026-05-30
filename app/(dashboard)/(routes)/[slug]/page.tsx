@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { projects_data } from "@/app/(dashboard)/(routes)/project_routes";
+import { projects_data, type Project } from "@/app/(dashboard)/(routes)/project_routes";
 import {
   Dialog,
   DialogContent,
@@ -17,9 +17,9 @@ import YtPlayer from "@/components/yt-player";
 
 const Page = ({ params }: { params: { slug: string } }) => {
   const [open, setOpen] = useState<boolean | undefined>(true);
-  const data: any = projects_data.filter((el) => {
-    return el.href === params.slug;
-  })[0];
+  const data: Project | undefined = projects_data.find(
+    (el) => el.href === `/${params.slug}`
+  );
 
   if (!data?.title) {
     return (
@@ -47,7 +47,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
               <DialogHeader>
                 <DialogTitle>{data.title}</DialogTitle>
                 <DialogDescription
-                  dangerouslySetInnerHTML={{ __html: data.description }}
+                  dangerouslySetInnerHTML={{ __html: data.description ?? "" }}
                 ></DialogDescription>
               </DialogHeader>
               {/* content goes here */}
@@ -78,7 +78,9 @@ const Page = ({ params }: { params: { slug: string } }) => {
             id="iframe"
           ></iframe>
         )}
-        {data.project_presentation === "youtube" && <YtPlayer url={data.url} />}
+        {data.project_presentation === "youtube" && data.url && (
+          <YtPlayer url={data.url} />
+        )}
       </div>
     </>
   );
