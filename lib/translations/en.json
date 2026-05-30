@@ -23,5 +23,56 @@
   "lang": {
     "switchToEnglish": "Switch to English",
     "switchToPolish": "Switch to Polish"
+  },
+  "projects": {
+    "dashboard": {
+      "label": "Dashboard"
+    },
+    "virtual_warehouse": {
+      "label": "Virtual warehouse Manager",
+      "title": "Virtual warehouse Manager",
+      "description": "Web app for managing virtual store and handling deliveries of digital products. Created with React, Tailwind, EP(Redux), ReactQuery. Application allows creating customers entities, adding products to storage, manage orders and deliveries, handle invoices."
+    },
+    "portfolio_site": {
+      "label": "Portfolio Site",
+      "title": "Portfolio site",
+      "description": "My previous portfolio site that uses Sanity CMS to populate data. Created with React, using only Framer-Motion library and SCSS for styling"
+    },
+    "project_manager": {
+      "label": "Project Manager",
+      "title": "Project Manager",
+      "description": "Project management system designed for users to customize, tag and organize their projects created with external API. With full user account management. Created using Next, React Query, shadcn/ui"
+    },
+    "nn_racer": {
+      "label": "Neural Network race",
+      "title": "Neural Network car simulation",
+      "description": "Project visualizes implementation of evolutionary Neural Network, depicted as 'race'. Implemented in pure JS <br/><br/> Firstly, 1000 random agents are spawn, simulated and rated by their performance. Agents are sorted by their results. First 1% is copied to the next generation without modification (marked as green), rest is composed from randomly (weighted by performance score) selected two parents. Half of genome comes from one parent, the other half from the other. Then some random mutation is applied. This next population restarts simulation, rating and propagation cycle indefinitely. <br/><br/> Obstacles on the course are generated randomly to avoid overfitting to one scenario. Course is getting progressively harder. <br/><br/> Each agent has the ability to increase or decrease its speed, turn left or right (4 outputs on NN). It also has limited number of sensors which detects objects nearby (inputs of NN)"
+    },
+    "GPT_api3": {
+      "label": "Sorting Algos visualizer",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!"
+    },
+    "pathfinding_game": {
+      "label": "Pathfinding Game",
+      "title": "Prototype of game in Unity (C#)",
+      "description": "Prototype of a game inspired by Rimworld. My primary objectives were to design and implement a robust building system and procedural behavior for pawns, creating a dynamic and 'lively' gameplay experience. The entire project was developed using Unity and programmed in C#. The main focus of the project became pathfinding A* algorithm able to handle up to 1000 characters."
+    },
+    "akd": {
+      "label": "Architecture firm site",
+      "title": "AKD Architekci - architecture firm business site",
+      "description": "Page created with wordpress. Main goal was to create unique design and rank for few relevant keywords in google. As of 2022 page ranks as 3rd after 3 years without any updates."
+    },
+    "GPT_api": {
+      "label": "Chat GPT client",
+      "description": "Simple chatGpt client implementation. Due to Api limitation You need to be logged in to use it!"
+    },
+    "scraper": {
+      "label": "Crypto wallet scraper & visualizer",
+      "title": "BTC wallet transaction visualizer",
+      "description": "App that scrapes transaction data from provided BTC wallet address. Data is presented on graph and some numerical parameters are provided. <br/><br/> App was built using MERN stack: MongoDB, Express, React and Node. <br/><br/> Live demo retired (Heroku free tier sunset, November 2022)."
+    },
+    "settings": {
+      "label": "User Settings"
+    }
   }
 }

@@ -47,9 +47,15 @@ const Page = ({ params }: { params: { slug: string } }) => {
             </DialogTrigger>
             <DialogContent className="md:max-w-[800px] sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>{data.title}</DialogTitle>
+                <DialogTitle>
+                  {t(`projects.${data.href.replace(/^\//, "")}.title`, { defaultValue: data.title ?? "" })}
+                </DialogTitle>
                 <DialogDescription
-                  dangerouslySetInnerHTML={{ __html: data.description ?? "" }}
+                  dangerouslySetInnerHTML={{
+                    __html: t(`projects.${data.href.replace(/^\//, "")}.description`, {
+                      defaultValue: data.description ?? "",
+                    }),
+                  }}
                 ></DialogDescription>
               </DialogHeader>
               {/* content goes here */}

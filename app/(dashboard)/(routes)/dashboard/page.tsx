@@ -56,7 +56,9 @@ export default function Home() {
                     )}
                   />
                 </div>
-                <div className="font-semibold">{project.label}</div>
+                <div className="font-semibold">
+                  {t(`projects.${project.href.replace(/^\//, "")}.label`, { defaultValue: project.label })}
+                </div>
               </div>
               <ArrowRight className="w-5 h-5" />
             </Card>

@@ -23,5 +23,56 @@
   "lang": {
     "switchToEnglish": "Przełącz na angielski",
     "switchToPolish": "Przełącz na polski"
+  },
+  "projects": {
+    "dashboard": {
+      "label": "Pulpit"
+    },
+    "virtual_warehouse": {
+      "label": "Wirtualny menedżer magazynu",
+      "title": "Wirtualny menedżer magazynu",
+      "description": "Aplikacja webowa do zarządzania wirtualnym sklepem i obsługi dostaw produktów cyfrowych. Stworzona w React, Tailwind, EP(Redux), ReactQuery. Aplikacja umożliwia tworzenie podmiotów klientów, dodawanie produktów do magazynu, zarządzanie zamówieniami i dostawami, obsługę faktur."
+    },
+    "portfolio_site": {
+      "label": "Strona portfolio",
+      "title": "Strona portfolio",
+      "description": "Moja poprzednia strona portfolio wykorzystująca Sanity CMS do zarządzania danymi. Stworzona w React, używając wyłącznie biblioteki Framer-Motion oraz SCSS do stylizacji."
+    },
+    "project_manager": {
+      "label": "Menedżer projektów",
+      "title": "Menedżer projektów",
+      "description": "System zarządzania projektami zaprojektowany dla użytkowników do dostosowywania, tagowania i organizowania projektów stworzonych z zewnętrznym API. Z pełnym zarządzaniem kontami użytkowników. Stworzone w Next, React Query, shadcn/ui."
+    },
+    "nn_racer": {
+      "label": "Wyścig sieci neuronowych",
+      "title": "Symulacja samochodów z siecią neuronową",
+      "description": "Projekt wizualizuje implementację ewolucyjnej sieci neuronowej, przedstawioną jako 'wyścig'. Zaimplementowane w czystym JS <br/><br/> Najpierw spawnowanych jest 1000 losowych agentów, symulowanych i ocenianych pod kątem wydajności. Agenci są sortowani według wyników. Pierwszy 1% jest kopiowany do następnej generacji bez modyfikacji (oznaczone na zielono), reszta jest komponowana z losowo (ważonych wynikiem wydajności) wybranych dwóch rodziców. Połowa genomu pochodzi od jednego rodzica, druga połowa od drugiego. Następnie zastosowana zostaje losowa mutacja. Ta następna populacja restartuje cykl symulacji, oceniania i propagacji w nieskończoność. <br/><br/> Przeszkody na torze są generowane losowo, aby uniknąć nadmiernego dopasowania do jednego scenariusza. Tor jest stopniowo coraz trudniejszy. <br/><br/> Każdy agent ma możliwość zwiększania lub zmniejszania prędkości, skręcania w lewo lub w prawo (4 wyjścia NN). Ma również ograniczoną liczbę czujników wykrywających obiekty w pobliżu (wejścia NN)."
+    },
+    "GPT_api3": {
+      "label": "Wizualizator algorytmów sortowania",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti praesentium atque voluptatibus. Consequuntur, rem voluptates accusantium consectetur magnam voluptatum? Et corporis atque odio. Distinctio, soluta dolorum. Tenetur ullam voluptates molestiae!"
+    },
+    "pathfinding_game": {
+      "label": "Gra Pathfinding",
+      "title": "Prototyp gry w Unity (C#)",
+      "description": "Prototyp gry zainspirowanej Rimworld. Moimi głównymi celami było zaprojektowanie i zaimplementowanie solidnego systemu budowania oraz proceduralnego zachowania pionków, tworząc dynamiczną i 'żywą' rozgrywkę. Cały projekt został opracowany w Unity i zaprogramowany w C#. Głównym fokusem projektu stał się algorytm pathfinding A* zdolny do obsługi do 1000 postaci."
+    },
+    "akd": {
+      "label": "Strona biura architektonicznego",
+      "title": "AKD Architekci - strona biznesowa pracowni architektonicznej",
+      "description": "Strona stworzona w WordPress. Głównym celem było stworzenie unikalnego designu oraz pozycjonowanie pod kilka istotnych słów kluczowych w Google. Na rok 2022 strona zajmuje 3. miejsce po 3 latach bez aktualizacji."
+    },
+    "GPT_api": {
+      "label": "Klient Chat GPT",
+      "description": "Prosta implementacja klienta Chat GPT. Ze względu na ograniczenia API musisz być zalogowany aby z niej skorzystać!"
+    },
+    "scraper": {
+      "label": "Skraper i wizualizator portfela krypto",
+      "title": "Wizualizator transakcji portfela BTC",
+      "description": "Aplikacja, która pobiera dane transakcji z podanego adresu portfela BTC. Dane są prezentowane na wykresie i dostarczane są niektóre parametry numeryczne. <br/><br/> Aplikacja została zbudowana z wykorzystaniem stosu MERN: MongoDB, Express, React i Node. <br/><br/> Demo na żywo wycofane (zakończenie wsparcia darmowej warstwy Heroku, listopad 2022)."
+    },
+    "settings": {
+      "label": "Ustawienia użytkownika"
+    }
   }
 }
