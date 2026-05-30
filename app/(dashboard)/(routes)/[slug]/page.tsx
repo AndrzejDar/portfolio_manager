@@ -24,7 +24,6 @@ const Page = ({ params }: { params: { slug: string } }) => {
   if (!data?.title) {
     return (
       <>
-        {console.log(data)}
         <div>Taki projekt nie istnieje</div>
       </>
     );
@@ -32,7 +31,6 @@ const Page = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      {console.log(data)}
       <div className="w-full h-[calc(100vh-64px)] modal-container relative">
         <div className="absolute right-[30px] bottom-[15px] ">
           <Dialog
