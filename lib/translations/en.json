@@ -1,7 +1,8 @@
 {
   "common": {
     "login": "Login",
-    "register": "Register"
+    "register": "Register",
+    "openMenu": "Open navigation menu"
   },
   "dashboard": {
     "title": "My projects",
@@ -10,12 +11,15 @@
   },
   "project": {
     "notFound": "Project not found",
-    "descriptionButton": "Project Description"
+    "descriptionButton": "Project Description",
+    "openSource": "Open source code",
+    "openExternal": "Open project link"
   },
   "gpt": {
     "heading": "Conversation",
     "subheading": "OpenAI client. Uses Clerk to authenticate user.",
     "placeholder": "how do I ...",
+    "promptLabel": "Prompt for the assistant",
     "generate": "Generate",
     "loginToUse": "Login To Use",
     "noConversation": "No conversation started"

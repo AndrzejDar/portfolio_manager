@@ -61,16 +61,22 @@ const Page = ({ params }: { params: { slug: string } }) => {
               {/* content goes here */}
               <DialogFooter>
                 {data.gitUrl && (
-                  <Button type="submit" variant="accent">
-                    <Link href={data.gitUrl}>
-                      <Code2 className="h-5 w-5 text-white" />
+                  <Button type="button" variant="accent" asChild>
+                    <Link
+                      href={data.gitUrl}
+                      aria-label={t("project.openSource", { defaultValue: "Open source code" })}
+                    >
+                      <Code2 className="h-5 w-5 text-white" aria-hidden="true" />
                     </Link>
                   </Button>
                 )}
                 {data.url && (
-                  <Button type="submit" variant="accent">
-                    <Link href={data.url}>
-                      <FileSymlink className="h-5 w-5 text-white" />
+                  <Button type="button" variant="accent" asChild>
+                    <Link
+                      href={data.url}
+                      aria-label={t("project.openExternal", { defaultValue: "Open project link" })}
+                    >
+                      <FileSymlink className="h-5 w-5 text-white" aria-hidden="true" />
                     </Link>
                   </Button>
                 )}
@@ -82,7 +88,9 @@ const Page = ({ params }: { params: { slug: string } }) => {
           <iframe
             className="w-full h-full"
             src={data.url}
-            title={data.title}
+            title={t(`projects.${data.href.replace(/^\//, "")}.title`, {
+              defaultValue: data.title || data.label || "Project preview",
+            })}
             id="iframe"
           ></iframe>
         )}

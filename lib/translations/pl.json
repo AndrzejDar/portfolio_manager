@@ -1,7 +1,8 @@
 {
   "common": {
     "login": "Zaloguj",
-    "register": "Zarejestruj"
+    "register": "Zarejestruj",
+    "openMenu": "Otwórz menu nawigacji"
   },
   "dashboard": {
     "title": "Moje projekty",
@@ -10,12 +11,15 @@
   },
   "project": {
     "notFound": "Projekt nie znaleziony",
-    "descriptionButton": "Opis projektu"
+    "descriptionButton": "Opis projektu",
+    "openSource": "Otwórz kod źródłowy",
+    "openExternal": "Otwórz link do projektu"
   },
   "gpt": {
     "heading": "Rozmowa",
     "subheading": "Klient OpenAI. Używa Clerk do uwierzytelniania użytkownika.",
     "placeholder": "jak mogę ...",
+    "promptLabel": "Prompt dla asystenta",
     "generate": "Generuj",
     "loginToUse": "Zaloguj się aby użyć",
     "noConversation": "Nie rozpoczęto rozmowy"

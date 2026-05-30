@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import Heading from "@/components/heading";
 import { formSchema } from "./constants";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -91,12 +91,16 @@ const ConversationPage = () => {
                 name="prompt"
                 render={({ field }) => (
                   <FormItem className="col-span-12 lg:col-span-10">
+                    <FormLabel className="sr-only">
+                      {t("gpt.promptLabel", { defaultValue: "Prompt for the assistant" })}
+                    </FormLabel>
                     <FormControl className="m-0 p-0">
                       <Input
                         className="border-0 outline-none
                       focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isSubmitting}
                         placeholder={t("gpt.placeholder")}
+                        aria-label={t("gpt.promptLabel", { defaultValue: "Prompt for the assistant" })}
                         {...field}
                       />
                     </FormControl>
@@ -124,7 +128,7 @@ const ConversationPage = () => {
         </div>
         <div className="space-y-4 mt-4">
           {isSubmitting && (
-            <div className="p-8 rounded-lg w-full felx items-center justify-center bg-muted">
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
               <Loader />
             </div>
           )}

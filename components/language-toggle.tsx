@@ -14,7 +14,7 @@ const LanguageToggle = () => {
   };
 
   const baseBtn =
-    "h-full px-3 text-sm font-medium rounded transition-colors";
+    "h-full px-3 text-sm font-medium rounded transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40";
   const activeCls = "bg-black text-white";
   const inactiveCls = "text-gray-500 hover:text-black";
 
