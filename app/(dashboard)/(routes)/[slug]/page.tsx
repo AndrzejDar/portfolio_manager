@@ -24,7 +24,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
   if (!data?.title) {
     return (
       <>
-        <div>Taki projekt nie istnieje</div>
+        <div>Project not found</div>
       </>
     );
   }
