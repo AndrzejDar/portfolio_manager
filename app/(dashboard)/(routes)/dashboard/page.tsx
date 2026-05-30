@@ -2,33 +2,9 @@
 
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { MessageSquare, ArrowRight, ImageIcon, Music } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { projects_data } from "../project_routes";
-
-// const tools = [
-//   {
-//     label: "con",
-//     icon: MessageSquare,
-//     color: "text-violet-500",
-//     bgColor: "bg-violet-500/10",
-//     href: "/conversation",
-//   },
-//   {
-//     label: "con2",
-//     icon: Music,
-//     color: "text-emerald-500",
-//     bgColor: "bg-emerald-500/10",
-//     href: "/con2",
-//   },
-//   {
-//     label: "con3",
-//     icon: ImageIcon,
-//     color: "text-red-500",
-//     bgColor: "bg-red-500/10",
-//     href: "/con3",
-//   },
-// ];
 
 export default function Home() {
   const router = useRouter();

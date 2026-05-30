@@ -7,65 +7,8 @@ import Link from "next/link";
 import { projects_data as routes } from "@/app/(dashboard)/(routes)/project_routes";
 
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, MessageSquare, Settings } from "lucide-react";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
-
-// const routes = [
-//   {
-//     label: "Dashboard",
-//     icon: LayoutDashboard,
-//     href: "/dashboard",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "Portfolio Site",
-//     icon: MessageSquare,
-//     href: "/portfolio_site",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "Chat GPT client",
-//     icon: MessageSquare,
-//     href: "/GPT_api",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "Neural Network race",
-//     icon: MessageSquare,
-//     href: "/GPT_api",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "Sorting Algos visualizer",
-//     icon: MessageSquare,
-//     href: "/GPT_api",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "Pathfinding Game",
-//     icon: MessageSquare,
-//     href: "/GPT_api",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "Crypto wallet scraper & visualizer",
-//     icon: MessageSquare,
-//     href: "/GPT_api",
-//     color: "text-sky-500",
-//   },
-//   {
-//     label: "opt 2",
-//     icon: MessageSquare,
-//     href: "/code",
-//     color: "text-pink-700",
-//   },
-//   {
-//     label: "Settings",
-//     icon: Settings,
-//     href: "/settings",
-//   },
-// ];
 
 const Sidebar = () => {
   const pathname = usePathname();
