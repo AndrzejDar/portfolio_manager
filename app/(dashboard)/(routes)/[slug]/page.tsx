@@ -14,9 +14,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Code2, FileSymlink } from "lucide-react";
 import YtPlayer from "@/components/yt-player";
+import { useTranslation } from "react-i18next";
 
 const Page = ({ params }: { params: { slug: string } }) => {
   const [open, setOpen] = useState<boolean | undefined>(true);
+  const { t } = useTranslation();
   const data: Project | undefined = projects_data.find(
     (el) => el.href === `/${params.slug}`
   );
@@ -24,7 +26,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
   if (!data?.title) {
     return (
       <>
-        <div>Project not found</div>
+        <div>{t("project.notFound")}</div>
       </>
     );
   }
@@ -40,7 +42,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
           >
             <DialogTrigger asChild>
               <Button variant="accent" className="shadow-2xl">
-                Project Description
+                {t("project.descriptionButton")}
               </Button>
             </DialogTrigger>
             <DialogContent className="md:max-w-[800px] sm:max-w-[425px]">

@@ -1,0 +1,27 @@
+{
+  "common": {
+    "login": "Zaloguj",
+    "register": "Zarejestruj"
+  },
+  "dashboard": {
+    "title": "Moje projekty",
+    "description": "Lista moich projektów eksploracyjnych.",
+    "intro": "Każdy z tych projektów został podjęty w celu poszerzenia mojej wiedzy w określonej dziedzinie. Ponieważ ta strona służy jako moje pole do eksperymentów, znajdziesz tu różnorodne tematy o różnym stopniu dopracowania. Wszystkie implementacje algorytmów zostały napisane całkowicie od zera."
+  },
+  "project": {
+    "notFound": "Projekt nie znaleziony",
+    "descriptionButton": "Opis projektu"
+  },
+  "gpt": {
+    "heading": "Rozmowa",
+    "subheading": "Klient OpenAI. Używa Clerk do uwierzytelniania użytkownika.",
+    "placeholder": "jak mogę ...",
+    "generate": "Generuj",
+    "loginToUse": "Zaloguj się aby użyć",
+    "noConversation": "Nie rozpoczęto rozmowy"
+  },
+  "lang": {
+    "switchToEnglish": "Przełącz na angielski",
+    "switchToPolish": "Przełącz na polski"
+  }
+}

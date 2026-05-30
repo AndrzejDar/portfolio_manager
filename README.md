@@ -14,6 +14,7 @@ Live at [projects.anddar00.com](https://projects.anddar00.com).
 - Tailwind CSS + shadcn/ui
 - Clerk (authentication)
 - React Hook Form + Zod (form validation)
+- Internationalization — react-i18next (EN / PL)
 - OpenAI SDK (for the embedded ChatGPT client project)
 - Lucide React icons
 

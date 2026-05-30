@@ -1,0 +1,27 @@
+{
+  "common": {
+    "login": "Login",
+    "register": "Register"
+  },
+  "dashboard": {
+    "title": "My projects",
+    "description": "List of my exploration projects.",
+    "intro": "Each of these projects was undertaken with the goal of expanding my knowledge in a specific field. Since this page serves as my playground, you can expect to find a variety of topics, ranging in refinement levels. Furthermore, all algorithm implementations featured here have been written entirely from scratch."
+  },
+  "project": {
+    "notFound": "Project not found",
+    "descriptionButton": "Project Description"
+  },
+  "gpt": {
+    "heading": "Conversation",
+    "subheading": "OpenAI client. Uses Clerk to authenticate user.",
+    "placeholder": "how do I ...",
+    "generate": "Generate",
+    "loginToUse": "Login To Use",
+    "noConversation": "No conversation started"
+  },
+  "lang": {
+    "switchToEnglish": "Switch to English",
+    "switchToPolish": "Switch to Polish"
+  }
+}

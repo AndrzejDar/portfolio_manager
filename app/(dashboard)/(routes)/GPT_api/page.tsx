@@ -21,10 +21,12 @@ import { cn } from "@/lib/utils";
 import UserAvatar from "@/components/user-avatar";
 import BotAvatar from "@/components/bot-avatar";
 import { useAuth } from "@clerk/nextjs";
+import { useTranslation } from "react-i18next";
 
 const ConversationPage = () => {
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);
+  const { t } = useTranslation();
 
   const { userId } = useAuth();
 
@@ -72,8 +74,8 @@ const ConversationPage = () => {
   return (
     <div>
       <Heading
-        title="Conversation"
-        description="OpenAi client. Uses Clerk to authenticate user"
+        title={t("gpt.heading")}
+        description={t("gpt.subheading")}
         icon={MessageSquare}
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
@@ -94,7 +96,7 @@ const ConversationPage = () => {
                         className="border-0 outline-none
                       focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isSubmitting}
-                        placeholder="how do i ..."
+                        placeholder={t("gpt.placeholder")}
                         {...field}
                       />
                     </FormControl>
@@ -106,7 +108,7 @@ const ConversationPage = () => {
                   className="col-span-12 lg:col-span-2 w-full"
                   disabled={isSubmitting}
                 >
-                  Generate
+                  {t("gpt.generate")}
                 </Button>
               ) : (
                 <Button
@@ -114,7 +116,7 @@ const ConversationPage = () => {
                   className="col-span-12 lg:col-span-2 w-full"
                   onClick={handleLogin}
                 >
-                  Login To Use
+                  {t("gpt.loginToUse")}
                 </Button>
               )}
             </form>
@@ -127,7 +129,7 @@ const ConversationPage = () => {
             </div>
           )}
           {messages.length === 0 && !isSubmitting && (
-            <Empty label="No conversation started" />
+            <Empty label={t("gpt.noConversation")} />
           )}
           <div className="flex flex-col-reverse gap-y-4">
             {messages.map((message) => (

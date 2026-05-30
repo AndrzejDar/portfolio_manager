@@ -4,25 +4,24 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import { projects_data } from "../project_routes";
 
 export default function Home() {
   const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <div>
       <div className="mb-8 mx-10 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          My projects
+          {t("dashboard.title")}
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-justify">
-          List of my exploration projects.
+          {t("dashboard.description")}
           <br />
-          Each of these projects was undertaken with the goal of expanding my
-          knowledge in specific field. Since this page serves as my playground,
-          you can expect to find a variety of topics, ranging in refinement
-          levels. Furthermore, all algorithm implementations featured here have
-          been written entirely from scratch.
+          <br />
+          {t("dashboard.intro")}
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
