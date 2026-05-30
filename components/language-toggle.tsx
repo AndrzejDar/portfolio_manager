@@ -28,7 +28,7 @@ const LanguageToggle = () => {
         type="button"
         onClick={() => setLang("en")}
         aria-pressed={current === "en"}
-        aria-label={t("lang.switchToEnglish")}
+        title={t("lang.switchToEnglish")}
         className={cn(baseBtn, current === "en" ? activeCls : inactiveCls)}
       >
         EN
@@ -37,7 +37,7 @@ const LanguageToggle = () => {
         type="button"
         onClick={() => setLang("pl")}
         aria-pressed={current === "pl"}
-        aria-label={t("lang.switchToPolish")}
+        title={t("lang.switchToPolish")}
         className={cn(baseBtn, current === "pl" ? activeCls : inactiveCls)}
       >
         PL
