@@ -13,7 +13,7 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
+import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import axios from "axios";
 import Empty from "@/components/empty";
 import Loader from "@/components/loader";
@@ -24,7 +24,7 @@ import { useAuth } from "@clerk/nextjs";
 
 const ConversationPage = () => {
   const router = useRouter();
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+  const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);
 
   const { userId } = useAuth();
 
@@ -41,7 +41,7 @@ const ConversationPage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const userMessage: ChatCompletionRequestMessage = {
+      const userMessage: ChatCompletionMessageParam = {
         role: "user",
         content: values.prompt,
       };
@@ -132,7 +132,7 @@ const ConversationPage = () => {
           <div className="flex flex-col-reverse gap-y-4">
             {messages.map((message) => (
               <div
-                key={message.content}
+                key={String(message.content)}
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg",
                   message.role === "user"
@@ -141,7 +141,7 @@ const ConversationPage = () => {
                 )}
               >
                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className="text-sm">{message.content}</p>
+                <p className="text-sm">{String(message.content)}</p>
               </div>
             ))}
           </div>
