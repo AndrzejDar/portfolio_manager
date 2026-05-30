@@ -91,7 +91,7 @@ export const projects_data: Project[] = [
     project_presentation: "iframe",
     title: "Neural Network car simulation",
     description:
-      "Project visualizes implementation of evolutionary Neural Network, depicted as 'race'. Implemented in pure JS <br/><br/> Firstly, 1000 random agents are spawn, simulated and rated by their performance. Agents are sorted by their results. First 1% is copied to the next generation without modification (marked as green), rest is composed from randomly (weighted by performance score) selected two parents. Half of genome comes from one parent, the other half from the other. Then some random mutation is applied. This next population restarts simulation, rating and propagation cycle indefinitely. <br/><br/>  Obstacles on the course are generated randomly to avoid overfitting to one scenario. Course is getting progresively harder. <br/><br/>  Each agent has the ability to increase or decrease its speed, turn left or right (4 outputs on NN). It also has limited number of sensors which detects objects nearby (inputs of NN)",
+      "Project visualizes implementation of evolutionary Neural Network, depicted as 'race'. Implemented in pure JS <br/><br/> Firstly, 1000 random agents are spawn, simulated and rated by their performance. Agents are sorted by their results. First 1% is copied to the next generation without modification (marked as green), rest is composed from randomly (weighted by performance score) selected two parents. Half of genome comes from one parent, the other half from the other. Then some random mutation is applied. This next population restarts simulation, rating and propagation cycle indefinitely. <br/><br/> Obstacles on the course are generated randomly to avoid overfitting to one scenario. Course is getting progressively harder. <br/><br/> Each agent has the ability to increase or decrease its speed, turn left or right (4 outputs on NN). It also has limited number of sensors which detects objects nearby (inputs of NN)",
   },
   {
     label: "Sorting Algos visualizer",
@@ -128,7 +128,7 @@ export const projects_data: Project[] = [
     project_presentation: "iframe",
     title: "AKD Architekci - architecture firm business site",
     description:
-      "Page created with wordpress. Main goal was to create unique design and rank for few relewant keywords in google. As of 2022 page ranks as 3rd after 3 years without any updates.",
+      "Page created with wordpress. Main goal was to create unique design and rank for few relevant keywords in google. As of 2022 page ranks as 3rd after 3 years without any updates.",
   },
   {
     label: "Chat GPT client",
@@ -138,7 +138,7 @@ export const projects_data: Project[] = [
     bgColor: "bg-yellow-500/40",
     type: "project",
     description:
-      "Simple chatGpt client implementation. Due to Api limitation You need to bo logged in to use it!",
+      "Simple chatGpt client implementation. Due to Api limitation You need to be logged in to use it!",
   },
   {
     label: "Crypto wallet scraper & visualizer",
