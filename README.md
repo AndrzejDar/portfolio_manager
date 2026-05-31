@@ -41,46 +41,80 @@ All routes are public; auth is only enforced server-side on the
 
 ## Quality
 
-Lighthouse scores measured against the live deploy at
+Lighthouse scores against the live deploy at
 `https://projects.anddar00.com/` (mobile, headless, Lighthouse 12.8.2):
 
 | Category | Score |
 |---|---|
-| Performance | 94 |
-| Accessibility | 88 |
-| Best Practices | 96 |
-| SEO | 91 |
+| Performance | 97 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
 
-Reproduce locally with:
+Reproduce with:
 
 ```
 npx lighthouse https://projects.anddar00.com/ --chrome-flags="--headless"
 ```
 
-The 88 accessibility score reflected three failing audits — `button-name`
-(icon-only buttons missing accessible names), `color-contrast` (disabled
-project cards using `text-gray-400` on white), and `label-content-name-mismatch`
-(the OpenAI client input had only a `placeholder`, no label). All three are
-fixed in this branch and will be reflected in the next deploy.
+### A11y pass
 
-A11y baseline established by this pass:
+Three Lighthouse audits failed in the baseline run and were fixed:
 
-- Project cards are keyboard-focusable via `<Link>`; disabled cards announce
-  `aria-disabled`.
-- Icon-only buttons in the project detail dialog have `aria-label`s and use
-  `asChild` so the underlying `<a>` is the single focusable element.
-- The MobileSidebar trigger has an explicit accessible name
-  (`common.openMenu`, translated for EN/PL).
-- The OpenAI client `Input` has both an `sr-only` `<FormLabel>` and an
+- `button-name` — icon-only buttons in the project detail dialog
+  (`Code2` / `FileSymlink`) had no accessible name. Fixed with `aria-label`
+  plus the `asChild` pattern so the underlying `<a>` is the single
+  focusable element.
+- `color-contrast` — disabled project cards used `text-gray-400` on white
+  which failed WCAG AA. Bumped to `text-gray-500`.
+- `label-content-name-mismatch` — the OpenAI client `Input` had only a
+  `placeholder` and no real label. Fixed with `sr-only` `<FormLabel>` plus
   `aria-label`.
-- Decorative icons are marked `aria-hidden="true"`.
-- All interactive elements expose a visible focus ring
-  (`focus-visible:ring-2`).
 
-Local production-build Lighthouse runs require the Clerk environment
-variables to be set; without them every route returns 500 and the audit
-cannot complete. The live-deploy numbers above are the authoritative
-scores.
+Other a11y work bundled in the pass: dashboard project cards are
+keyboard-focusable via `<Link>`; MobileSidebar trigger has an explicit
+translated accessible name (`common.openMenu`); decorative icons marked
+`aria-hidden="true"`; visible focus rings (`focus-visible:ring-2`) on all
+interactive elements.
+
+### i18n SSR hydration
+
+react-i18next + Next.js App Router can produce SSR/client text-content
+mismatches when language detection runs at module-init time: the server
+renders with the fallback language (English) because `localStorage` and
+`navigator` are unavailable, while the client immediately detects a
+different language and re-renders, triggering React `#418` / `#423` /
+`#425` errors that Lighthouse counts as console errors against Best
+Practices.
+
+This codebase sidesteps that by running language detection in a
+`useEffect` inside `I18nProvider` rather than through
+`i18next-browser-languagedetector` at init. Server and first client
+paint always render English; user preference (from `localStorage` or
+`navigator.language`) is applied post-mount via
+`i18n.changeLanguage()`. Trade-off: brief English flash for non-EN
+users on first paint (~50–200ms). Benefit: zero hydration errors and a
+deterministic `<html lang="en">` for crawlers.
+
+### SEO
+
+A static `public/robots.txt` is committed so the file is served by
+Next.js as `text/plain`; without it the `[slug]` dynamic route would
+intercept `/robots.txt` and return SPA HTML, breaking Lighthouse's
+robots audit (the parser would see `<!DOCTYPE html>` instead of robots
+directives).
+
+### Performance — remaining 3 points
+
+The 97 vs 100 gap on Performance is third-party / not actionable:
+
+- `Array.prototype.flat` / `flatMap` / `Object.fromEntries` polyfills
+  bundled inside `axios` and `openai` SDK chunks (not this codebase's
+  source) — fixing means swapping deps.
+- Largest Contentful Paint at ~2.4s is mostly cold-cache TTFB from
+  Vercel edge.
+- Back/forward cache disabled because Clerk's session check sets
+  `Cache-Control: no-store` — Lighthouse marks this `Not actionable`.
 
 ## Running locally
 
